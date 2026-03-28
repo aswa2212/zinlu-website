@@ -65,13 +65,13 @@ export default function Contact() {
                                 Email
                             </div>
                             <a
-                                href="mailto:hello@zinlu.com"
+                                href="mailto:zinlu.business@gmail.com"
                                 className="font-body"
                                 style={{ color: '#c9c6c1', textDecoration: 'none', fontSize: '15px', transition: 'color 300ms ease' }}
                                 onMouseEnter={(e) => (e.currentTarget.style.color = '#ee826c')}
                                 onMouseLeave={(e) => (e.currentTarget.style.color = '#c9c6c1')}
                             >
-                                hello@zinlu.com
+                                zinlu.business@gmail.com
                             </a>
                         </div>
                         <div>
@@ -140,7 +140,7 @@ export default function Contact() {
                                 onMouseEnter={(e) => (e.currentTarget.style.color = '#ee826c')}
                                 onMouseLeave={(e) => (e.currentTarget.style.color = '#c9c6c1')}
                             >
-                                linkedin.com/company/zinluoptimization
+                                zinlu
                             </a>
                         </div>
                         <div>

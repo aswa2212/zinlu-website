@@ -132,7 +132,7 @@ export default function Process() {
                 </div>
 
                 {/* Mobile: vertical timeline */}
-                <div className="reveal-stagger md:hidden" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+                <div className="reveal-stagger md:hidden" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', marginTop: '4rem' }}>
                     {steps.map((step) => (
                         <div key={step.num} style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
                             <div

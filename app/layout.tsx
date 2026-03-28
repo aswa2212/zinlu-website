@@ -6,6 +6,11 @@ export const metadata: Metadata = {
     description:
         'ZINLU helps small and mid-sized businesses streamline operations, eliminate repetitive work, and make better decisions using AI-driven systems and automation.',
     keywords: 'AI automation, business optimization, workflow automation, AI systems, operational efficiency',
+    icons: {
+        icon: '/favicon-logo.jpg',
+        shortcut: '/favicon-logo.jpg',
+        apple: '/favicon-logo.jpg',
+    },
     openGraph: {
         title: 'ZINLU — AI Automation Agency',
         description:
