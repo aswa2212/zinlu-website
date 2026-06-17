@@ -18,10 +18,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-    title: 'ZINLU — Business Optimization Company',
+    title: 'ZINLU — Business Optimization Agency',
     description:
-        'You Built the Business. We Build What Runs It.',
-    keywords: 'business optimization, operational systems, business operating system, SMB operations, revenue systems, operational infrastructure',
+        'ZINLU is a business optimization agency and consulting firm based in Coimbatore, Tamil Nadu, that helps small and mid-sized businesses optimize workflows and build operational systems.',
+    keywords: 'business optimization agency, operational systems, workflow optimization, business consulting, Coimbatore, Tamil Nadu, SMB operations, operational infrastructure',
     alternates: {
         canonical: 'https://www.zinlu.in',
     },
@@ -31,17 +31,17 @@ export const metadata: Metadata = {
         apple: '/favicon-logo.jpg',
     },
     openGraph: {
-        title: 'ZINLU — Business Optimization Company',
+        title: 'ZINLU — Business Optimization Agency',
         description:
-            'You Built the Business. We Build What Runs It.',
+            'ZINLU is a business optimization agency and consulting firm based in Coimbatore, Tamil Nadu, that helps small and mid-sized businesses optimize workflows and build operational systems.',
         type: 'website',
         locale: 'en_US',
     },
     twitter: {
         card: 'summary',
-        title: 'ZINLU — Business Optimization Company',
+        title: 'ZINLU — Business Optimization Agency',
         description:
-            'You Built the Business. We Build What Runs It.',
+            'ZINLU is a business optimization agency and consulting firm based in Coimbatore, Tamil Nadu, that helps small and mid-sized businesses optimize workflows and build operational systems.',
     },
 }
 
@@ -62,7 +62,13 @@ export default function RootLayout({
                             "name": "ZINLU",
                             "url": "https://www.zinlu.in",
                             "logo": "https://www.zinlu.in/zinluweb.svg",
-                            "description": "ZINLU is a Business Optimization Company that builds and manages the systems that run a business — so it runs without the owner running behind it.",
+                            "description": "ZINLU is a Business Optimization Agency and consulting firm based in Coimbatore, Tamil Nadu, that helps small and mid-sized businesses optimize workflows and build operational systems so they run independently of the owner.",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Coimbatore",
+                                "addressRegion": "Tamil Nadu",
+                                "addressCountry": "IN"
+                            },
                             "contactPoint": {
                                 "@type": "ContactPoint",
                                 "telephone": "+91-84386-30519",

@@ -235,7 +235,7 @@ export default function Contact() {
                                 Location
                             </div>
                             <span className="font-body" style={{ color: 'rgba(201,198,193,0.6)', fontSize: '15px' }}>
-                                Remote — Worldwide
+                                Coimbatore, Tamil Nadu
                             </span>
                         </div>
 
