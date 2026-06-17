@@ -2,19 +2,10 @@
 
 import { useEffect, useRef } from 'react'
 
-const industries = [
-    'E-commerce',
-    'Online Services',
-    'Agencies',
-    'Education',
-    'SaaS Startups',
-    'Local Businesses',
-    'Consulting Firms',
-    'Healthcare Admin',
-    'Real Estate',
-    'Media & Content',
-    'Logistics',
-    'Professional Services',
+const qualifiers = [
+    'The business runs — but only because you’re holding it together',
+    'You’ve grown past what manual operations can handle',
+    'Revenue is slipping through gaps no one’s watching',
 ]
 
 export default function Industries() {
@@ -54,16 +45,22 @@ export default function Industries() {
                         className="font-body"
                         style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ee826c', fontWeight: 400 }}
                     >
-                        Industries
+                        Where We Operate
                     </span>
                 </div>
-                <div className="reveal" style={{ marginBottom: '3.5rem' }}>
+                <div className="reveal" style={{ marginBottom: '2rem' }}>
                     <h2
                         className="font-display"
                         style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', color: '#c9c6c1', lineHeight: 1.2 }}
                     >
-                        We Work Across Sectors
+                        Built for Businesses That Are Done Running on Heroics
                     </h2>
+                </div>
+
+                <div className="reveal" style={{ marginBottom: '3.5rem', maxWidth: '620px' }}>
+                    <p className="font-body" style={{ fontSize: '17px', color: 'rgba(201,198,193,0.65)', lineHeight: 1.8 }}>
+                        ZINLU works with businesses that have proven the model works and are ready to stop depending on the owner to keep it running. If your business moves money, serves customers, and depends on people coordinating manually to function — we can build the system that replaces that dependency.
+                    </p>
                 </div>
 
                 {/* Industry pills */}
@@ -75,9 +72,9 @@ export default function Industries() {
                         gap: '1rem',
                     }}
                 >
-                    {industries.map((industry) => (
+                    {qualifiers.map((q) => (
                         <div
-                            key={industry}
+                            key={q}
                             style={{
                                 border: '1px solid rgba(201,198,193,0.12)',
                                 borderRadius: '4px',
@@ -102,7 +99,7 @@ export default function Industries() {
                                 e.currentTarget.style.color = 'rgba(201,198,193,0.7)'
                             }}
                         >
-                            {industry}
+                            {q}
                         </div>
                     ))}
                 </div>

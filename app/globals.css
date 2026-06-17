@@ -1,6 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+/* Fonts loaded via next/font in layout.tsx — no @import needed */
 
-/* Services last card centering */
+/* ── Services section ──────────────────────────────────── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.svc-card {
+  border-radius: 6px;
+  padding: 2.5rem;
+}
+
+/* Last card centred on desktop when count is odd */
 .svc-last {
   grid-column: 1 / -1;
   max-width: 50%;
@@ -8,9 +20,21 @@
   width: 100%;
 }
 
+/* Mobile: single column, tighter padding */
 @media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-card {
+    padding: 1.5rem;
+  }
+
+  /* Last card is already full-width on a 1-col grid – reset overrides */
   .svc-last {
+    grid-column: auto;
     max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -45,7 +69,7 @@ html {
 body {
   background-color: #000000;
   color: #c9c6c1;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   font-weight: 300;
   line-height: 1.6;
   overflow-x: hidden;
@@ -211,11 +235,11 @@ body {
 
 /* Typography helpers */
 .font-display {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair), 'Playfair Display', serif;
 }
 
 .font-body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
 }
 
 /* Max container */
@@ -223,6 +247,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+@media (max-width: 640px) {
+  .container-main {
+    padding: 0 1rem;
+  }
 }
 
 /* Section padding */

@@ -5,23 +5,23 @@ import { useEffect, useRef } from 'react'
 const steps = [
     {
         num: '1',
-        title: 'Discovery Call',
-        desc: 'We map your current operations, identify friction points, and understand your goals in a focused conversation.',
+        title: 'Operational Discovery',
+        desc: 'We map your current operations, surface every inefficiency, and identify the highest-leverage points for system-driven improvement. We ask the questions most consultants skip.',
     },
     {
         num: '2',
-        title: 'Operational Audit',
-        desc: 'We review your workflows, tools, and data flows to uncover opportunities for automation and system improvement.',
+        title: 'System Design',
+        desc: 'We architect your Business Operating System — the exact infrastructure your business needs to run without manual dependency. Every component is designed for your context, not copied from a playbook.',
     },
     {
         num: '3',
-        title: 'System Design & Build',
-        desc: 'We design and build your custom automation workflows, AI integrations, and operational systems.',
+        title: 'Build & Deploy',
+        desc: 'We build every component, integrate every connection, and deploy a production-grade system that is tested before it goes live. You review. We execute.',
     },
     {
         num: '4',
-        title: 'Launch & Enablement',
-        desc: 'We deploy, test, and hand off — with training, documentation, and ongoing support to ensure lasting adoption.',
+        title: 'Ongoing Management',
+        desc: 'We take permanent ownership of the system. You see the outcomes. We handle everything it takes to produce them — monitoring, maintaining, and evolving as your business grows.',
     },
 ]
 
@@ -52,7 +52,7 @@ export default function Process() {
                         className="font-body"
                         style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ee826c', fontWeight: 400 }}
                     >
-                        Engagement Process
+                        How to Get Started
                     </span>
                 </div>
                 <div className="reveal" style={{ marginBottom: '4rem' }}>
@@ -60,7 +60,7 @@ export default function Process() {
                         className="font-display"
                         style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', color: '#c9c6c1', lineHeight: 1.2 }}
                     >
-                        How We Work Together
+                        Four Steps to a Business That Runs Itself
                     </h2>
                 </div>
 

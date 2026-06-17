@@ -13,12 +13,15 @@ import Vision from '@/components/Vision'
 import CTA from '@/components/CTA'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import WhatsAppFloat from '@/components/WhatsAppFloat'
 
 export default function Home() {
     return (
         <>
             {/* Fixed scroll-driven gradient background */}
             <ScrollBackground />
+            {/* Persistent floating WhatsApp button */}
+            <WhatsAppFloat />
 
             {/* All content sits above the fixed background */}
             <div style={{ position: 'relative', zIndex: 1 }}>
@@ -30,7 +33,7 @@ export default function Home() {
                     <Approach />
                     <Services />
                     <Industries />
-                    <TechStack />
+                    {/* <TechStack /> */}
                     <WhyZinlu />
                     <Process />
                     <Vision />

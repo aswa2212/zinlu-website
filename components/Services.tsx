@@ -4,50 +4,16 @@ import { useEffect, useRef } from 'react'
 
 const services = [
     {
-        title: 'AI Process Automation',
-        bullets: [
-            'End-to-end workflow automation using AI agents',
-            'Document processing and data extraction',
-            'Automated reporting pipelines',
-            'Multi-step task orchestration',
-            'Error detection and exception handling',
-        ],
+        title: 'Revenue Capture Systems',
+        body: 'We build the infrastructure that ensures every lead is captured, every inquiry is responded to, and every sales opportunity is followed through — without manual intervention. Your pipeline runs. Your follow-ups happen. Your revenue doesn\'t wait for someone to remember.',
     },
     {
-        title: 'Business Workflow Optimization',
-        bullets: [
-            'Operational audit and bottleneck mapping',
-            'Process redesign for scale',
-            'SOP digitization and automation',
-            'Cross-team coordination systems',
-        ],
+        title: 'Customer Operations Systems',
+        body: 'We build the operational layer that serves your customers end-to-end — from first contact through resolution — at the quality and speed that large businesses deliver, without the headcount they require. Your customers are served. Your team is freed.',
     },
     {
-        title: 'AI System Integration',
-        bullets: [
-            'LLM integration into existing tools',
-            'API connectivity and data synchronization',
-            'CRM, ERP, and SaaS automation',
-            'Custom AI middleware development',
-        ],
-    },
-    {
-        title: 'Customer Experience Automation',
-        bullets: [
-            'AI-powered support and messaging',
-            'Lead qualification workflows',
-            'Personalized outreach automation',
-            'Customer journey optimization',
-        ],
-    },
-    {
-        title: 'Internal Productivity Systems',
-        bullets: [
-            'Knowledge base and AI assistant setup',
-            'Internal chatbot development',
-            'Task and project management automation',
-            'Team onboarding automation',
-        ],
+        title: 'Business Intelligence Systems',
+        body: 'We build the data and reporting infrastructure that gives you a real-time view of your business — what is working, what is breaking, and where the next growth lever is. You stop operating on instinct. You start operating on facts.',
     },
 ]
 
@@ -95,16 +61,21 @@ export default function Services() {
                         className="font-body"
                         style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ee826c', fontWeight: 400 }}
                     >
-                        What We Do
+                        What We Build
                     </span>
                 </div>
-                <div className="reveal" style={{ marginBottom: '4rem' }}>
+                <div className="reveal" style={{ marginBottom: '1.5rem' }}>
                     <h2
                         className="font-display"
                         style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#c9c6c1', lineHeight: 1.2 }}
                     >
-                        Services Built for Operational Impact
+                        Business Operating Systems, Not One-Off Projects
                     </h2>
+                </div>
+                <div className="reveal" style={{ marginBottom: '4rem', maxWidth: '680px' }}>
+                    <p className="font-body" style={{ fontSize: '17px', color: 'rgba(201,198,193,0.6)', lineHeight: 1.8 }}>
+                        Every ZINLU engagement delivers a permanent operational asset — a system your business runs on, that we manage, and that gets stronger as your business grows.
+                    </p>
                 </div>
 
                 {/* Services grid */}
@@ -112,18 +83,14 @@ export default function Services() {
                     className="reveal-stagger"
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                         gap: '1.5rem',
                     }}
                 >
-                    {services.map((svc, i) => (
+                    {services.map((svc) => (
                         <div
                             key={svc.title}
-                            className={`card-base${i === services.length - 1 && services.length % 2 !== 0 ? ' svc-last' : ''}`}
-                            style={{
-                                borderRadius: '6px',
-                                padding: '2.5rem',
-                            }}
+                            className="card-base svc-card"
                         >
                             <h3
                                 className="font-display"
@@ -137,30 +104,19 @@ export default function Services() {
                             >
                                 {svc.title}
                             </h3>
-                            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                                {svc.bullets.map((bullet) => (
-                                    <li
-                                        key={bullet}
-                                        className="font-body"
-                                        style={{
-                                            fontSize: '13px',
-                                            color: 'rgba(201,198,193,0.65)',
-                                            display: 'flex',
-                                            alignItems: 'flex-start',
-                                            gap: '10px',
-                                            lineHeight: 1.6,
-                                        }}
-                                    >
-                                        <span style={{ color: '#ee826c', flexShrink: 0, marginTop: '4px', fontSize: '10px' }}>▸</span>
-                                        {bullet}
-                                    </li>
-                                ))}
-                            </ul>
+                            <p
+                                className="font-body"
+                                style={{
+                                    fontSize: '14px',
+                                    color: 'rgba(201,198,193,0.65)',
+                                    lineHeight: 1.8,
+                                }}
+                            >
+                                {svc.body}
+                            </p>
                         </div>
                     ))}
                 </div>
-
-
             </div>
         </section>
     )

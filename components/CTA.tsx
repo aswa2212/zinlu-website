@@ -58,7 +58,7 @@ export default function CTA() {
                             margin: '0 auto',
                         }}
                     >
-                        Start Optimizing Your Business Operations
+                        Ready to Build a Business That Runs Without You?
                     </h2>
                 </div>
 
@@ -73,8 +73,7 @@ export default function CTA() {
                             lineHeight: 1.8,
                         }}
                     >
-                        Let's explore how AI systems and automation can unlock efficiency, reduce operational
-                        drag, and position your business to scale.
+                        Tell us about your operations. We will identify exactly where the system breaks — and what it would take to fix it permanently.
                     </p>
                 </div>
 
@@ -83,7 +82,9 @@ export default function CTA() {
                     style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}
                 >
                     <a
-                        href="#contact"
+                        href="https://wa.me/918438630519"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-primary"
                         style={{
                             padding: '15px 38px',
@@ -96,7 +97,7 @@ export default function CTA() {
                             lineHeight: '14px',
                         }}
                     >
-                        Get in Touch
+                        Start the Conversation
                     </a>
                     <a
                         href="#services"

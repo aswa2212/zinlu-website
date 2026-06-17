@@ -4,24 +4,24 @@ import { useEffect, useRef } from 'react'
 
 const painPoints = [
     {
-        title: 'Too Much Manual Work',
-        desc: 'Teams spend hours on repetitive tasks that could be automated, reducing time for growth.',
+        title: 'Owner Dependency',
+        desc: 'The business cannot function without you in it. Every decision, every follow-up, every operation requires your direct attention — which means your growth is capped by your hours.',
     },
     {
-        title: 'Disconnected Tools',
-        desc: 'Software systems don\'t talk to each other, creating data silos and inefficiencies.',
+        title: 'Revenue Left on the Table',
+        desc: 'Leads that don\'t get followed up. Customers who asked and heard nothing back. Opportunities that slipped through. These are not edge cases — they are daily losses that compound silently.',
     },
     {
-        title: 'Slow Decision Making',
-        desc: 'Without structured data flows, leaders operate on gut feel rather than real-time insight.',
+        title: 'Operations That Break Under Load',
+        desc: 'What works at ten customers breaks at fifty. Manual processes don\'t scale — they multiply errors, slow response times, and erode the customer experience that built your reputation.',
     },
     {
-        title: 'Hard to Scale',
-        desc: 'Manual processes break down as the business grows, creating bottlenecks and errors.',
+        title: 'Decisions Made in the Dark',
+        desc: 'Without structured data flowing through your operations, every major call is a guess. Leaders who operate on instinct alone consistently underperform those who operate on systems.',
     },
     {
-        title: 'Wasted Operational Capacity',
-        desc: 'Resources are tied up in low-value tasks instead of being channeled into strategic work.',
+        title: 'No Operational Leverage',
+        desc: 'Your team spends its capacity on low-value repetition instead of high-value execution. The hours exist — but they are buried in tasks that should not require a human to complete.',
     },
 ]
 
@@ -61,7 +61,15 @@ export default function Problem() {
             />
 
             <div className="container-main">
-                {/* heading */}
+                {/* eyebrow + heading */}
+                <div className="reveal" style={{ marginBottom: '1rem' }}>
+                    <span
+                        className="font-body"
+                        style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ee826c', fontWeight: 400 }}
+                    >
+                        Why Most Businesses Plateau
+                    </span>
+                </div>
                 <div className="reveal" style={{ marginBottom: '2rem' }}>
                     <h2
                         className="font-display"
@@ -72,16 +80,14 @@ export default function Problem() {
                             maxWidth: '680px',
                         }}
                     >
-                        Why Businesses Struggle to Scale Efficiently
+                        The Real Bottleneck Is Never the Market
                     </h2>
                 </div>
 
                 {/* Intro paragraph */}
                 <div className="reveal" style={{ marginBottom: '4rem', maxWidth: '620px' }}>
                     <p className="font-body" style={{ color: 'rgba(201,198,193,0.65)', fontSize: '17px', lineHeight: 1.8 }}>
-                        Most businesses are held back not by lack of ambition, but by operational drag — systems
-                        that don't scale, processes that weren't designed for growth, and tools that work against
-                        each other. These are the patterns we see across industries.
+                        Almost every business that struggles to scale is facing the same structural problem: the business runs on people, not systems. When the people stop, everything stops. ZINLU fixes that at the root.
                     </p>
                 </div>
 
@@ -142,8 +148,7 @@ export default function Problem() {
                             paddingLeft: '1.5rem',
                         }}
                     >
-                        ZINLU focuses on solving these problems by introducing intelligent systems and
-                        automation into everyday business operations.
+                        ZINLU builds the infrastructure that eliminates each of these — not one at a time, but as an integrated operating system built specifically for your business.
                     </p>
                 </div>
             </div>

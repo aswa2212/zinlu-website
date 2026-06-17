@@ -5,18 +5,18 @@ import { useEffect, useRef } from 'react'
 const stages = [
     {
         number: '01',
-        title: 'Understand the Business',
-        desc: 'We begin by deeply understanding your operations — workflows, bottlenecks, tools, and goals. We map every process before recommending any solution.',
+        title: 'Diagnose',
+        desc: 'We map your business end-to-end — where time is lost, where revenue leaks, where decisions stall. We don\'t guess. We document exactly what is broken and why before designing any solution.',
     },
     {
         number: '02',
-        title: 'Design the Right Systems',
-        desc: 'We architect AI workflows and automation systems custom-built for your context — not generic templates. Every solution is designed with your team and scale in mind.',
+        title: 'Build',
+        desc: 'We design and build your Business Operating System — a complete operational infrastructure custom-engineered for your business context, your team, and your growth targets. No off-the-shelf configurations. No generic deployments.',
     },
     {
         number: '03',
-        title: 'Enable Real Adoption',
-        desc: 'We ensure your team can confidently use the systems we build. Training, handoff documentation, and ongoing support mean the value is realized — not just launched.',
+        title: 'Operate',
+        desc: 'We run it. Permanently. Your system is managed, monitored, and evolved by ZINLU on an ongoing basis. You see the outcomes. We handle everything underneath.',
     },
 ]
 
@@ -48,7 +48,7 @@ export default function Approach() {
                         className="font-body"
                         style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ee826c', fontWeight: 400 }}
                     >
-                        Our Approach
+                        How We Work
                     </span>
                 </div>
                 <div className="reveal" style={{ marginBottom: '4rem' }}>
@@ -56,7 +56,7 @@ export default function Approach() {
                         className="font-display"
                         style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#c9c6c1', lineHeight: 1.2, maxWidth: '560px' }}
                     >
-                        A Systematic Path from Problem to Performance
+                        From Operational Drag to Operational Leverage
                     </h2>
                 </div>
 

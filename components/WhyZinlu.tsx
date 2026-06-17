@@ -4,8 +4,8 @@ import { useEffect, useRef } from 'react'
 
 const differentiators = [
     {
-        title: 'Custom-Built Solutions',
-        desc: 'No cookie-cutter templates. Every system is designed for your specific workflow.',
+        title: 'Engineered for Your Business',
+        desc: 'Nothing we build is a configuration of someone else\'s template. Every system is designed from the ground up for your specific operations, your team, and your growth stage.',
         icon: (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <polyline points="2,11 8,17 18,5" stroke="#ee826c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -13,8 +13,8 @@ const differentiators = [
         ),
     },
     {
-        title: 'SMB-First Thinking',
-        desc: 'We understand small business constraints — budget, time, and team capacity matter.',
+        title: 'We Run What We Build',
+        desc: 'We don\'t hand off and disappear. ZINLU manages the infrastructure we build — monitoring performance, resolving issues, and evolving the system as your business grows.',
         icon: (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <polyline points="2,11 8,17 18,5" stroke="#ee826c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -22,8 +22,8 @@ const differentiators = [
         ),
     },
     {
-        title: 'Outcome-Driven',
-        desc: 'We measure success by real business impact — hours saved, errors reduced, revenue unlocked.',
+        title: 'Outcomes, Not Outputs',
+        desc: 'We measure what matters: leads captured, hours recovered, revenue that didn\'t slip through. Not features shipped. Not tasks completed. Not tools configured.',
         icon: (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <polyline points="2,11 8,17 18,5" stroke="#ee826c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -31,8 +31,8 @@ const differentiators = [
         ),
     },
     {
-        title: 'Transparent Process',
-        desc: 'You stay in the loop at every stage — no black boxes, no surprises.',
+        title: 'Right-Sized Today. Built to Outgrow Itself.',
+        desc: 'We understand the constraints of a growing business — budget, team size, time. Every system we build fits where you are today and is architected to carry you where you are going.',
         icon: (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <polyline points="2,11 8,17 18,5" stroke="#ee826c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -41,7 +41,7 @@ const differentiators = [
     },
     {
         title: 'Long-Term Partnership',
-        desc: 'We build to last. Our systems evolve as your business grows and needs change.',
+        desc: 'This is not a project engagement. ZINLU is an ongoing operational partner. The system grows with you. The relationship gets stronger as the business grows.',
         icon: (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <polyline points="2,11 8,17 18,5" stroke="#ee826c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -97,7 +97,7 @@ export default function WhyZinlu() {
                         className="font-display"
                         style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', color: '#c9c6c1', lineHeight: 1.2 }}
                     >
-                        What Makes Us Different
+                        We Don’t Deliver Projects. We Deliver Operating Infrastructure.
                     </h2>
                 </div>
 

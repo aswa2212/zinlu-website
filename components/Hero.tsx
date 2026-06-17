@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const pills = ['Reduce Manual Work', 'Operational Efficiency', 'AI Workflows', 'Scalable Systems']
+const pills = ['Operational Independence', 'Revenue That Doesn\'t Sleep', 'Systems Over Heroics', 'Built to Run Without You']
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -63,7 +63,7 @@ export default function Hero() {
                         margin: '0 auto 2rem auto',
                     }}
                 >
-                    Business Optimization Through AI Systems &amp; Automation
+                    You Built the Business. We Build What Runs It.
                 </h1>
 
                 {/* Subheadline */}
@@ -78,9 +78,7 @@ export default function Hero() {
                         lineHeight: 1.75,
                     }}
                 >
-                    We help small and mid-sized businesses streamline operations, eliminate
-                    repetitive work, and make better decisions using AI-driven systems and
-                    automation.
+                    ZINLU builds the operational infrastructure your business runs on — permanently managed, so you’re never the bottleneck again.
                 </p>
 
                 {/* CTA Buttons */}
@@ -95,7 +93,9 @@ export default function Hero() {
                     }}
                 >
                     <a
-                        href="#contact"
+                        href="https://wa.me/918438630519"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-primary"
                         style={{
                             padding: '14px 34px',
@@ -108,7 +108,7 @@ export default function Hero() {
                             lineHeight: '16px',
                         }}
                     >
-                        Start a Conversation
+                        Talk to Us
                     </a>
                     <a
                         href="#services"
@@ -124,8 +124,25 @@ export default function Hero() {
                             lineHeight: '16px',
                         }}
                     >
-                        Explore Services
+                        See What We Build
                     </a>
+                </div>
+
+                {/* Trust signal */}
+                <div
+                    className="hero-anim"
+                    style={{ marginBottom: '2.5rem' }}
+                >
+                    <p
+                        className="font-body"
+                        style={{
+                            fontSize: '12px',
+                            color: 'var(--color-muted)',
+                            letterSpacing: '0.04em',
+                        }}
+                    >
+                        We typically respond within a few hours — not days.
+                    </p>
                 </div>
 
                 {/* Micro pills */}
@@ -145,8 +162,8 @@ export default function Hero() {
                                 fontSize: '11px',
                                 letterSpacing: '0.12em',
                                 textTransform: 'uppercase',
-                                color: 'rgba(201,198,193,0.4)',
-                                border: '1px solid rgba(201,198,193,0.12)',
+                                color: 'rgba(201,198,193,0.65)',
+                                border: '1px solid rgba(201,198,193,0.25)',
                                 borderRadius: '9999px',
                                 padding: '6px 14px',
                                 fontFamily: 'Inter, sans-serif',

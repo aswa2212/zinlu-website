@@ -2,9 +2,21 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+type FormState = {
+    name: string
+    email: string
+    message: string
+}
+
+type Errors = Partial<FormState>
+
 export default function Contact() {
     const sectionRef = useRef<HTMLDivElement>(null)
     const [submitted, setSubmitted] = useState(false)
+    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' })
+    const [errors, setErrors] = useState<Errors>({})
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -20,9 +32,58 @@ export default function Contact() {
         return () => observer.disconnect()
     }, [])
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const validate = (): boolean => {
+        const newErrors: Errors = {}
+        if (!form.name || form.name.trim().length < 2)
+            newErrors.name = 'Please enter your name (at least 2 characters).'
+        if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+            newErrors.email = 'Please enter a valid email address.'
+        if (!form.message || form.message.trim().length < 10)
+            newErrors.message = 'Please tell us a bit more (at least 10 characters).'
+        setErrors(newErrors)
+        return Object.keys(newErrors).length === 0
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target
+        setForm((prev) => ({ ...prev, [name]: value }))
+        if (errors[name as keyof Errors]) {
+            setErrors((prev) => ({ ...prev, [name]: undefined }))
+        }
+    }
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setSubmitted(true)
+        if (!validate()) return
+
+        setLoading(true)
+        setError(false)
+
+        try {
+            const response = await fetch('https://formspree.io/f/xqeojrgo', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                body: JSON.stringify(form),
+            })
+
+            if (response.ok) {
+                setSubmitted(true)
+            } else {
+                setError(true)
+            }
+        } catch {
+            setError(true)
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    const errorStyle: React.CSSProperties = {
+        fontSize: '12px',
+        color: 'var(--color-accent)',
+        marginTop: '6px',
+        fontFamily: 'Inter, sans-serif',
+        display: 'block',
     }
 
     return (
@@ -42,7 +103,7 @@ export default function Contact() {
                         className="font-display"
                         style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', color: '#c9c6c1', lineHeight: 1.2 }}
                     >
-                        Let's Talk About Your Business
+                        Let&apos;s Talk About Your Business
                     </h2>
                 </div>
 
@@ -65,13 +126,17 @@ export default function Contact() {
                                 Email
                             </div>
                             <a
-                                href="mailto:zinlu.business@gmail.com"
+                                href="mailto:hello@zinlu.in"
                                 className="font-body"
-                                style={{ color: '#c9c6c1', textDecoration: 'none', fontSize: '15px', transition: 'color 300ms ease' }}
-                                onMouseEnter={(e) => (e.currentTarget.style.color = '#ee826c')}
-                                onMouseLeave={(e) => (e.currentTarget.style.color = '#c9c6c1')}
+                                style={{ color: '#ee826c', textDecoration: 'underline', textDecorationColor: 'rgba(238,130,108,0.4)', textUnderlineOffset: '3px', fontSize: '15px', transition: 'color 300ms ease, text-decoration-color 300ms ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                                onMouseEnter={(e) => { e.currentTarget.style.color = '#ff9a80'; e.currentTarget.style.textDecorationColor = 'rgba(255,154,128,0.8)'; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.color = '#ee826c'; e.currentTarget.style.textDecorationColor = 'rgba(238,130,108,0.4)'; }}
                             >
-                                zinlu.business@gmail.com
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                                hello@zinlu.in
                             </a>
                         </div>
                         <div>
@@ -176,7 +241,7 @@ export default function Contact() {
 
                         <div style={{ paddingTop: '1rem', borderTop: '1px solid rgba(201,198,193,0.07)' }}>
                             <p className="font-body" style={{ fontSize: '13px', color: 'rgba(201,198,193,0.4)', lineHeight: 1.75 }}>
-                                We typically respond within 24–48 hours. All enquiries are welcome — from early-stage exploration to ready-to-build engagements.
+                                We respond within 24–48 hours. Whether you&apos;re exploring or ready to build — this is where it starts.
                             </p>
                         </div>
                     </div>
@@ -190,11 +255,18 @@ export default function Contact() {
                                     Message Received
                                 </h3>
                                 <p className="font-body" style={{ color: 'rgba(201,198,193,0.55)', fontSize: '14px' }}>
-                                    We'll be in touch within 24–48 hours.
+                                    We&apos;ll be in touch within 24–48 hours.
                                 </p>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }} noValidate>
+                                {error && (
+                                    <div style={{ padding: '1rem', border: '1px solid rgba(238,130,108,0.3)', borderRadius: '4px' }}>
+                                        <p className="font-body" style={{ fontSize: '13px', color: 'var(--color-accent)', lineHeight: 1.6 }}>
+                                            Something went wrong. Please reach out directly via WhatsApp or email below.
+                                        </p>
+                                    </div>
+                                )}
                                 <div>
                                     <label
                                         htmlFor="contact-name"
@@ -208,9 +280,12 @@ export default function Contact() {
                                         name="name"
                                         type="text"
                                         placeholder="Your name"
-                                        required
+                                        value={form.name}
+                                        onChange={handleChange}
                                         className="form-input"
+                                        style={errors.name ? { borderBottomColor: 'var(--color-accent)' } : {}}
                                     />
+                                    {errors.name && <span style={errorStyle}>{errors.name}</span>}
                                 </div>
                                 <div>
                                     <label
@@ -225,9 +300,12 @@ export default function Contact() {
                                         name="email"
                                         type="email"
                                         placeholder="your@email.com"
-                                        required
+                                        value={form.email}
+                                        onChange={handleChange}
                                         className="form-input"
+                                        style={errors.email ? { borderBottomColor: 'var(--color-accent)' } : {}}
                                     />
+                                    {errors.email && <span style={errorStyle}>{errors.email}</span>}
                                 </div>
                                 <div>
                                     <label
@@ -241,15 +319,18 @@ export default function Contact() {
                                         id="contact-message"
                                         name="message"
                                         placeholder="Tell us about your business and what you're looking to build..."
-                                        required
+                                        value={form.message}
+                                        onChange={handleChange}
                                         rows={5}
                                         className="form-input"
-                                        style={{ resize: 'none' }}
+                                        style={{ resize: 'none', ...(errors.message ? { borderBottomColor: 'var(--color-accent)' } : {}) }}
                                     />
+                                    {errors.message && <span style={errorStyle}>{errors.message}</span>}
                                 </div>
                                 <button
                                     type="submit"
                                     className="btn-primary"
+                                    disabled={loading}
                                     style={{
                                         padding: '14px 32px',
                                         borderRadius: '9999px',
@@ -257,9 +338,11 @@ export default function Contact() {
                                         letterSpacing: '0.06em',
                                         alignSelf: 'flex-start',
                                         minHeight: '44px',
+                                        opacity: loading ? 0.7 : 1,
+                                        cursor: loading ? 'not-allowed' : 'pointer',
                                     }}
                                 >
-                                    Send Message
+                                    {loading ? 'Sending...' : 'Send Message'}
                                 </button>
                             </form>
                         )}

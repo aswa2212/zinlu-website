@@ -51,7 +51,7 @@ export default function Vision() {
                         className="font-body"
                         style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ee826c', fontWeight: 400 }}
                     >
-                        Our Vision
+                        Where We Are Going
                     </span>
                 </div>
 
@@ -69,7 +69,7 @@ export default function Vision() {
                             margin: '0 auto',
                         }}
                     >
-                        A World Where Every Business Operates at Its Full Potential
+                        Every Business Deserves to Run Like an Enterprise
                     </h2>
                 </div>
 
@@ -82,18 +82,13 @@ export default function Vision() {
                         className="font-body"
                         style={{ fontSize: '18px', color: 'rgba(201,198,193,0.72)', lineHeight: 1.85 }}
                     >
-                        We envision a future where the operational divide between large enterprises and small
-                        businesses disappears — where any company, regardless of size, can access intelligent
-                        systems that remove friction, surface insight, and unlock growth.
+                        The operational divide between a large company and a small business is not a resource gap — it is a systems gap. Enterprises run on infrastructure. Small businesses run on people. ZINLU closes that gap.
                     </p>
                     <p
                         className="font-body"
                         style={{ fontSize: '17px', color: 'rgba(201,198,193,0.55)', lineHeight: 1.85 }}
                     >
-                        ZINLU exists to accelerate that future — one business at a time. Not through generic
-                        software, but through thoughtfully designed systems that reflect the unique rhythm and
-                        ambition of each business we serve. This is not just automation. This is operational
-                        transformation.
+                        We are building toward a world where any business — regardless of size — can access the operational infrastructure that makes it run independently, scale predictably, and grow without its owner becoming the bottleneck. This is not a product. This is a different way of operating.
                     </p>
                 </div>
             </div>

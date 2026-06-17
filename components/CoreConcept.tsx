@@ -55,7 +55,7 @@ export default function CoreConcept() {
                             fontWeight: 400,
                         }}
                     >
-                        Our Philosophy
+                        Our Belief
                     </span>
                 </div>
 
@@ -71,7 +71,7 @@ export default function CoreConcept() {
                             margin: '0 auto',
                         }}
                     >
-                        Helping Businesses Operate Smarter with AI
+                        If You Stop, the Business Stops. That&apos;s the Problem We Solve.
                     </h2>
                 </div>
 
@@ -84,9 +84,7 @@ export default function CoreConcept() {
                             lineHeight: 1.85,
                         }}
                     >
-                        At ZINLU, we believe that AI isn't just for enterprises. Small and mid-sized businesses
-                        deserve the same operational edge that technology provides — systems that remove friction,
-                        surface insights, and allow teams to focus on what actually matters.
+                        Most owners are the operating system of their own business. Every decision, every follow-up, every function runs through them. The moment they step away — revenue slows, customers wait, and operations stall. That is not a business. That is a dependency.
                     </p>
                     <p
                         className="font-body"
@@ -96,10 +94,7 @@ export default function CoreConcept() {
                             lineHeight: 1.85,
                         }}
                     >
-                        We don't just deploy tools. We build intelligent operational infrastructure — automation
-                        pipelines, integrated workflows, and AI-guided decision layers — tailored precisely to
-                        how your business works and where it needs to grow. We act as a long-term partner in
-                        your operational evolution.
+                        We build the infrastructure that replaces that dependency permanently. We run it, we manage it, and we stand behind what it produces. Every engagement is a long-term operating partnership — not a project, not a handoff, not a tool you figure out alone.
                     </p>
                 </div>
 
